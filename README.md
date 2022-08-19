@@ -41,3 +41,10 @@ Note that if you use the VCC pin on the FTDI, you must insure that the jumper on
 7. Scroll down to the while(1) section. This section is equivalent to the loop() function in arduino. Here we can add our code to turn the PC13 pin on and off.
   
 ## Uploading Project to Black Pill via UART
+1. Open the Cube Programmer applications on your computer.
+2. Connect the FTDI via a USB cable to your computer.
+3. Put your Black Pill into DFU boot mode by holding in the BOOT0 button and simultaniously pressing the NRST button. Release the NRST button while still presseing the BOOT0 button. Finally release the BOOT0 button. Your Black Pill should now be in DFU boot mode.
+4. In the top right corner of the Cube programmer change ST-LINK to UART, insure that the right port is selected in the UART configuration menu and then click Connect. Your Black Pill should now be connected to your computer via UART.
+5. Select Erasing and Programming from the menu in the left side bar.
+6. In the Download menu select the path to the <STM32 Project>.elf file you created in the Cube IDE.
+7. Finally, click Start Programming in order to upload the file to your Black Pill.
