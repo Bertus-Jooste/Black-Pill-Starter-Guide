@@ -20,6 +20,7 @@ This is a repository which describes how to setup and install a program via UART
 * STM32 Cube Programmer
 
 ## Installing IDE and the Programmer
+The STM32 Cube IDE can be downloaded from the bottme of [this page.](https://www.st.com/en/development-tools/stm32cubeide.html)
 
 ## Wiring the FTDI to the Black Pill
 
