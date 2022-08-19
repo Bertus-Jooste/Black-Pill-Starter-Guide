@@ -27,6 +27,8 @@ Next we have to install [Cube Programmer](https://www.st.com/en/development-tool
 The STM32 Cube IDE will be used in order to create the program that is to be uploaded to the Black Pill as well as configure all the settings required for the Black Pill to function. The STM32 Cube Programmer, however, will be used to upload the <STM32 Project>.elf file via UART to the Black Pill.
 
 ## Wiring the FTDI to the Black Pill
+![Wiring Diagram of the FTDI and the Black Pill](https://github.com/Bertus-Jooste/Black-Pill-Starter-Guide/blob/master/Wiring%20Diagram.png)
+Note that if you use the VCC pin on the FTDI, you must insure that the jumper on the FTDI board is set to 3.3 V if you want to power the Black Pill with 5 V, move the jumber of the FTDI to the 5 V posistion and power the Black Pill through one of its 5 V tolerant pins.
 
 ## Creating First STM32 Project
 
