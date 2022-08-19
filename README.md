@@ -34,12 +34,13 @@ Note that if you use the VCC pin on the FTDI, you must insure that the jumper on
 
 ## Creating First STM32 Project
 1. Open up STM32Cube IDE, select File -> New -> STM32 Project
-2. In the MCU/MPU Selector, enter “STM32F411CEU6” into the part number search bar. This is the full name of the MCU on the adafruit black pill board. Select the only result in the search results, and click next
-3. In the project setup popup, set the project name (In my case, I chose “Blinky”), leave the rest as default, so click next, then finish.
-4. Once that’s done, it will open up the pinout and configuration page. There it’ll display the physical shape of the MCU, and the pins and pin names. This is where you can set individual pins to different default values, and the IDE will use this info to auto-generate setup code. In our case, we want to just left-click the PC13 pin, and click “GPIO_Output”. This pin is the pin connected to a user-controlled LED on the black pill. If you look on the black pill, you can see the LED we want to control, and see it has C13 next to it. Eventually we can set other pins to use more of the black pill’s dev board, but for now, that’s all we need to make blinky run.
-5. To have the IDE generate code, click the save icon, or hit ctrl+s to save the configuration. It will ask if you want to generate code, and then ask if you want to open the code perspective. Click yes to both.
-6. Now the main.c file will be open in one of the tabs. Select it. This is finally some C code!
-7. Scroll down to the while(1) section. This section is equivalent to the loop() function in arduino. Here we can add our code to turn the PC13 pin on and off.
+2. In the MCU/MPU Selector, enter ```STM32F411CEU6``` into the part number search bar. This is the full name of the MCU on the adafruit black pill board. Select the only result in the search results, and click next.
+3. In the project setup popup, set the project name, leave the rest as default, click next, then finish.
+4. Once that’s done, it will open up the pinout and configuration page. There it’ll display the physical shape of the MCU, and the pins and pin names. This is where you can set individual pins to different default values, and the IDE will use this info to auto-generate setup code. In our case, we want to just left-click the ```PC13 pin```, and click ```GPIO_Output```. This pin is the pin connected to a user-controlled LED on the Black Pill. If you look on the black pill, you can see the LED we want to control, and see it has ```C13``` next to it. Eventually we can set other pins to use more of the Black Pill’s dev board, but for now, that’s all we need.
+5. To have the IDE generate code, click the ```save icon```, or hit ```ctrl+s``` to save the configuration. It will ask if you want to generate code, and then ask if you want to open the code perspective. Click yes to both.
+6. Now the main.c file will be open in one of the tabs. Select it.
+7. Scroll down to the ```while(1)``` section. This section is equivalent to the ```loop() function``` in arduino. Here we can add our code to turn the ```PC13``` pin on and off. Copy the [code](#simple-led-blinking-program) at the bottom of this README.md file and paste it into the ```while(1)``` loop.
+8. Build the project by clicking the ```build all``` button to the right of the hammer icon or by hitting ```ctrl+b```.
   
 ## Uploading Project to Black Pill via UART
 1. Open the Cube Programmer applications on your computer.
