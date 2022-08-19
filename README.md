@@ -20,7 +20,11 @@ This is a repository which describes how to setup and install a program via UART
 * STM32 Cube Programmer
 
 ## Installing IDE and the Programmer
-The STM32 Cube IDE can be downloaded from the bottme of [this page.](https://www.st.com/en/development-tools/stm32cubeide.html)
+The STM32 Cube IDE can be downloaded from the bottme of [this page](https://www.st.com/en/development-tools/stm32cubeide.html). There are installers for either Linux, Windows of macOS. Note, however, that ST Microelectronics does require an email address in order to send the download link. After downloading the Cube IDE one can simply follow the installers prompts in order to correctly setup the Cube IDE on your device. Furthermore, note during the installation process it is best to leave all path variables and install locations with their default value.
+
+Next we have to install [Cube Programmer](https://www.st.com/en/development-tools/stm32cubeprog.html) which can be downloaded from ST Microelectronic's site. There are again cross platform installers for Linux, Windows or macOS.
+
+The STM32 Cube IDE will be used in order to create the program that is to be uploaded to the Black Pill as well as configure all the settings required for the Black Pill to function. The STM32 Cube Programmer, however, will be used to upload the <STM32 Project>.elf file via UART to the Black Pill.
 
 ## Wiring the FTDI to the Black Pill
 
