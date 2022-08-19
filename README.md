@@ -3,10 +3,10 @@ This is a repository which describes how to setup and install a program via UART
 
 ## Table of Contents
 * [Requirements](#requirements)
-* Installing IDE and Programmer
-* Wiring the FTDI to the Black Pill
-* Creating First STM32 Project
-* Uploading Project to Black Pill via UART
+* [Installing IDE and Programmer](#installing-ide-and-the-programmer)
+* [Wiring the FTDI to the Black Pill](#wiring-the-ftdi-to-the-black-pill)
+* [Creating First STM32 Project](#creating-first-stm32-project)
+* [Uploading Project to Black Pill via UART](#uploading-project-to-black-pill-via-uart)
 
 ## Requirements
 ### Hardware
