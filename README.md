@@ -34,7 +34,7 @@ Note that if you use the VCC pin on the FTDI instead of a dedicated 3.3 V or 5 V
 
 ## Creating First STM32 Project
 1. Open up the STM32 Cube IDE, select ```File -> New -> STM32 Project```
-2. In the ````MCU/MPU Selector```, type ```STM32F411CEU6``` into the part number search bar. This is the full name of the MCU on the Black Pill board. Select the top result in the search results, and click ```next```.
+2. In the ```MCU/MPU Selector```, type ```STM32F411CEU6``` into the part number search bar. This is the full name of the MCU on the Black Pill board. Select the top result in the search results, and click ```next```.
 3. In the ```project setup popup```, enter your project's name, leave the rest as default, click ```next```, then ```finish```.
 4. Once that’s done, it will open up the ```pinout and configuration``` page. There it’ll display the physical shape of the MCU, and the pins and pin names. This is where you can set individual pins to different default values, and the IDE will use this info to auto-generate setup code. In our case, we want to just left-click the ```PC13 pin```, and click ```GPIO_Output```. This pin is the pin connected to a user-controlled LED on the Black Pill. If you look on the Black Pill, you can see the LED we want to control, and see it has ```C13``` next to it. Eventually we can set other pins to use more of the Black Pill’s dev board, but for now, that’s all we need.
 5. To have the IDE generate code, click the ```save icon```, or hit ```ctrl+s``` to save the configuration. It will ask if you want to generate code, and then ask if you want to open the code perspective. Click ```yes``` to both.
@@ -45,7 +45,7 @@ Note that if you use the VCC pin on the FTDI instead of a dedicated 3.3 V or 5 V
 ## Uploading Project to Black Pill via UART
 1. Open the STM32 Cube Programmer application on your computer.
 2. Connect the FTDI via a USB cable to your computer.
-3. Put your Black Pill into ```DFU boot mode``` by holding in the ```BOOT0``` button and simultaniously pressing the ```NRST``` button. Release the ```NRST``` button while still pressing the ```BOOT0``` button. Finally release the ```BOOT0``` button. Your Black Pill should now be in ```DFU boot mode```.
+3. Put your Black Pill into ```DFU boot mode``` by holding in the ```BOOT0``` button and then pressing the ```NRST``` button. Release the ```NRST``` button while still pressing the ```BOOT0``` button. Finally release the ```BOOT0``` button. Your Black Pill should now be in ```DFU boot mode```.
 4. In the top right corner of the Cube Programmer change ```ST-LINK``` to ```UART```, insure that the right port is selected in the ```UART configuration``` menu and then click ```Connect```. Your Black Pill should now be connected to your computer via UART.
 5. Select ```Erasing and Programming``` from the menu in the left side bar.
 6. In the ```Download menu``` select the path to ```<Your STM32 Project Name>.elf``` file you created in the Cube IDE. The path will most probably be ```<Path to where you saved your project>/Debug/<Project Name>.elf```
