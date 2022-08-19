@@ -25,7 +25,7 @@ The [STM32 Cube IDE](https://www.st.com/en/development-tools/stm32cubeide.html) 
 
 Next we have to install [Cube Programmer](https://www.st.com/en/development-tools/stm32cubeprog.html) which can be downloaded from ST Microelectronic's site. There are again cross platform installers for Linux, Windows or macOS.
 
-The STM32 Cube IDE will be used in order to create the program that is to be uploaded to the Black Pill as well as configure all the settings required for the Black Pill to function. The STM32 Cube Programmer, however, will be used to upload the <STM32 Project>.elf file via UART to the Black Pill.
+The STM32 Cube IDE will be used in order to create the program that is to be uploaded to the Black Pill as well as configure all the settings required for the Black Pill to function. The STM32 Cube Programmer, however, will be used to upload the {STM32 Project}.elf file via UART to the Black Pill.
 
 ## Wiring the FTDI to the Black Pill
 ![Wiring Diagram of the FTDI and the Black Pill](https://github.com/Bertus-Jooste/Black-Pill-Starter-Guide/blob/master/Wiring%20Diagram.png)
@@ -47,7 +47,7 @@ Note that if you use the VCC pin on the FTDI, you must insure that the jumper on
 3. Put your Black Pill into DFU boot mode by holding in the BOOT0 button and simultaniously pressing the NRST button. Release the NRST button while still presseing the BOOT0 button. Finally release the BOOT0 button. Your Black Pill should now be in DFU boot mode.
 4. In the top right corner of the Cube programmer change ST-LINK to UART, insure that the right port is selected in the UART configuration menu and then click Connect. Your Black Pill should now be connected to your computer via UART.
 5. Select Erasing and Programming from the menu in the left side bar.
-6. In the Download menu select the path to the <STM32 Project>.elf file you created in the Cube IDE.
+6. In the Download menu select the path to the {STM32 Project}.elf file you created in the Cube IDE. The path will most probably be {Path to where you saved your project}/Debug/{Project Name}.elf
 7. Finally, click Start Programming in order to upload the file to your Black Pill.
 
 ## Simple LED Blinking Program
