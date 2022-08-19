@@ -7,6 +7,7 @@ This is a repository which describes how to setup and install a program via UART
 * [Wiring the FTDI to the Black Pill](#wiring-the-ftdi-to-the-black-pill)
 * [Creating First STM32 Project](#creating-first-stm32-project)
 * [Uploading Project to Black Pill via UART](#uploading-project-to-black-pill-via-uart)
+* [Simple LED Blinking Program](#simple-led-blinking-program)
 
 ## Requirements
 ### Hardware
@@ -48,3 +49,14 @@ Note that if you use the VCC pin on the FTDI, you must insure that the jumper on
 5. Select Erasing and Programming from the menu in the left side bar.
 6. In the Download menu select the path to the <STM32 Project>.elf file you created in the Cube IDE.
 7. Finally, click Start Programming in order to upload the file to your Black Pill.
+
+## Simple LED Blinking Program
+```
+while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
+	  HAL_Delay(1000);
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
+	  HAL_Delay(1000);
+  }
+```
